@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track your repair</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="public_body">
+
+    <main class="track_panel">
+        <p class="brand">Repair Tracker</p>
+        <h1>Track your repair</h1>
+        <p class="lede">Enter the reference on your job ticket to see where your device is.</p>
+
+        <form id="track_form" class="track_form" autocomplete="off">
+            <label for="ticket_ref">Ticket reference</label>
+            <input type="text" id="ticket_ref" name="ticket_ref" placeholder="TSH-0001" maxlength="12" required>
+            <button type="submit" class="button">Check status</button>
+        </form>
+
+        <p id="track_message" class="message" role="status" aria-live="polite"></p>
+
+        <section id="track_result" class="track_result" hidden>
+            <p class="result_ref" id="result_ref"></p>
+            <p class="result_device" id="result_device"></p>
+            <div class="pipeline" id="pipeline"></div>
+            <p class="result_updated" id="result_updated"></p>
+        </section>
+
+        <p class="staff_link"><a href="/login">Staff login</a></p>
+    </main>
+
+    <script src="js/lookup.js"></script>
+</body>
+</html>
